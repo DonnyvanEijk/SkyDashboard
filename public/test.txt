@@ -1,0 +1,9 @@
+python-dotenv
+mysql-connector-python
+tkinter
+python-interface
+
+
+
+
+\
