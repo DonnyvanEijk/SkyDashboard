@@ -41,7 +41,7 @@ const Email = () => {
             };
     
             // Make a POST request using fetch
-            const response = await fetch('https://hgs97p-ip-109-36-137-231.tunnelmole.net/api/sendEmail', requestOptions);
+            const response = await fetch('https://epj3id-ip-178-85-159-52.tunnelmole.net/api/sendEmail', requestOptions);
             const responseData = await response.json(); // Parse the response JSON
     
             if (response.ok) {

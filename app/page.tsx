@@ -28,6 +28,7 @@ const Home = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState(''); 
   const [isEmailSending, setIsEmailSending] = useState(false);
+  const [isUserActive, setIsUserActive] = useState(false);
 
 
   const router = useRouter();
@@ -38,8 +39,8 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://hgs97p-ip-109-36-137-231.tunnelmole.net/api/users`);
-        const response2 = await axios.get(`https://hgs97p-ip-109-36-137-231.tunnelmole.net/cards`);
+        const response = await axios.get(`https://epj3id-ip-178-85-159-52.tunnelmole.net/api/users`);
+        const response2 = await axios.get(`https://epj3id-ip-178-85-159-52.tunnelmole.net/cards`);
         setUserData(response.data);
         setCardData(response2.data);
     
@@ -248,7 +249,13 @@ const Home = () => {
                     <li className="flex items-center gap-5 p-3 border-b border-gray-300 last:border-b-0" key={inventoryIndex}>
                       <div className='lg:text-[1rem] flex gap-[8vw]'>
                         <div className='flex flex-col justify-center'>
+                          
+                         {inventoryItem.skylanderid && (
+                              <p >Id: {inventoryItem.skylanderid} </p>
+                          )}
+                         
                           <p>
+                  
                             {inventoryItem.name} 
                             {inventoryItem.name.toLowerCase().includes('legendary') && <FaStar className="text-yellow-500" />}
                             {inventoryItem.name.toLowerCase().includes('dark ') && <RiMagicLine className="text-purple-600" />}
@@ -306,11 +313,27 @@ const Home = () => {
 
 
       {/* New form for contacting the developer */}
-      <div className="absolute top-0 right-0 z-50 m-4">
+      <div className="absolute top-0 right-0 z-50 m-4 ">
         <Button onClick={handleContactRedirect}>Contact Developer</Button>
       </div>
-  
+
+
+{ showCardData || submittedUser ? false:
+  <Card className='m-6 w-[30vw] text-[0.8rem] rounded-[20px] p-5 bg-zinc-800 border-gray-600 border absolute top-12 -right-3'>
+   <h2 className='font-bold text-[1rem]  mb-5'> Prijzenlijst voor 21/03/2024 - 24/03/2024:</h2>
+<ul className='font-semibold mb-5 '>
+<li>Mystery Card - 50 Skycoins 🪙</li>
+<li>Dark Spyro - 2500 Skycoins 🪙</li>
+<li>VVind-up - 69 Skycoins 🪙</li>
+<li>Grim Creeper - 34 Skycoins 🪙</li>
+</ul>
+
+<p className='font-light'>En uiteraard om uw kaarten te verkopen hanteren wij de prijzen die onderaan de kaarten staan. Pre-orderen van de shop kan een dag van tevoren vanaf 19:30 uur</p>
+    </Card>
+}
+    
     </div>
+   
   );
 }
 
