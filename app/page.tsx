@@ -104,7 +104,7 @@ const Home = () => {
                   
                 </h3>
                 <div className='font-light'>Rarity: {card.rarity == "dark" && <h3 className='bg-purple-800 rounded p-4'>Dark</h3>}  {card.rarity == "legendary" && <h3 className='bg-yellow-600 rounded p-4'>Legendary</h3>}   {card.rarity == "rare" && <h3 className='bg-cyan-800 rounded p-4'>Rare</h3>} {card.rarity == "uncommon" && <h3 className='bg-green-600 rounded p-4'>Uncommon</h3> }  {card.rarity == "common" && <h3 className='bg-zinc-600 rounded p-4'>Common</h3>} {card.rarity == "lightcore" && <h3 className='bg-gray-400 rounded p-4'></h3>} {card.rariry == "giants" && <h3 className='bg-orange-600 rounded p-4'>Giant</h3>} {card.rarity == "shop exclusive" && <h3 className='bg-purple-400 text-black rounded p-4'>Shop exclusive</h3>}</div>
-                <div className='font-light p-2 relative left-[-0.5rem]'> Series: {card.game == "Spyro's Adventure" && <h3 className='bg-cyan-700 p-4 rounded mt-4'>Spyro's adventure</h3>} {card.game == "Giants" && <h3 className='bg-orange-500 p-4 rounded mt-4'>Giants</h3>} {card.game == "Swap Force" && <h3 className='bg-green-600 p-4 rounded mt-4'>Swap Force </h3>}  </div>
+                <div className='font-light p-2 relative left-[-0.5rem]'> Series: {card.game == "Spyros Adventure" && <h3 className='bg-cyan-700 p-4 rounded mt-4'>Spyros adventure</h3>} {card.game == "Giants" && <h3 className='bg-orange-500 p-4 rounded mt-4'>Giants</h3>} {card.game == "Swap Force" && <h3 className='bg-green-600 p-4 rounded mt-4'>Swap Force </h3>}  </div>
                 </div>
                
                 <div>
