@@ -319,17 +319,9 @@ const Home = () => {
 
 
 { showCardData || submittedUser ? false:
-  <Card className='m-6 w-[30vw] text-[0.8rem] rounded-[20px] p-5 bg-zinc-800 border-gray-600 border absolute top-12 -right-3'>
-   <h2 className='font-bold text-[1rem]  mb-5'> Prijzenlijst voor 21/03/2024 - 24/03/2024:</h2>
-<ul className='font-semibold mb-5 '>
-<li>Mystery Card - 50 Skycoins 🪙</li>
-<li>Dark Spyro - 2500 Skycoins 🪙</li>
-<li>VVind-up - 69 Skycoins 🪙</li>
-<li>Grim Creeper - 34 Skycoins 🪙</li>
-</ul>
-
-<p className='font-light'>En uiteraard om uw kaarten te verkopen hanteren wij de prijzen die onderaan de kaarten staan. Pre-orderen van de shop kan een dag van tevoren vanaf 19:30 uur</p>
-    </Card>
+<div>
+  
+</div>
 }
     
     </div>
