@@ -318,12 +318,7 @@ const Home = () => {
       </div>
 
 
-{ showCardData || submittedUser ? false:
-<div>
-  
-</div>
-}
-    
+
     </div>
    
   );
