@@ -39,8 +39,8 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://epj3id-ip-178-85-159-52.tunnelmole.net/api/users`);
-        const response2 = await axios.get(`https://epj3id-ip-178-85-159-52.tunnelmole.net/cards`);
+        const response = await axios.get(`https://sky-py.onrender.com/api/users`);
+        const response2 = await axios.get(`https://sky-py.onrender.com/cards`);
         setUserData(response.data);
         setCardData(response2.data);
     
