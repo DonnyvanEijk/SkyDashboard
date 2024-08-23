@@ -40,9 +40,9 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`https://sky-py.onrender.com/api/users`);
-        const response2 = await axios.get(`https://sky-py.onrender.com/cards`);
+        // const response2 = await axios.get(`https://sky-py.onrender.com/cards`);
         setUserData(response.data);
-        setCardData(response2.data);
+        // setCardData(response2.data);
     
       } catch (error) {
         console.error("There was an error making a connection to the API:", error);
@@ -109,7 +109,7 @@ const Home = () => {
                
                 <div>
                     <div className='flex justify-center items-center'>
-                        <img src={card.cardfront} alt={card.name} className="w-[7vw] object-cover rounded-[0.5rem]" />
+                        <img src={card.photo} alt={card.name} className="w-[7vw] object-cover rounded-[0.5rem]" />
                     </div>
               
                 </div>
@@ -191,13 +191,13 @@ const Home = () => {
             <div className='p-4'>
               <h2 className="text-2xl font-bold mb-2">{item.name}</h2>
               <p>
-                Unique cards: {item.cardInventory.length}
+                Unique cards: {item.skyventory.length}
               </p>
               <p>{item.count}</p>
             </div>
             <div className="flex justify-between p-4">
               <h3 className="text-xl font-bold mb-2">Inventory:</h3>
-              <div className="text-xl font-bold">{item.SkyCoins} Skycoins🪙</div>
+              <div className="text-xl font-bold">{item.coins} Coins🪙</div>
             </div>
             <ScrollArea className="w-full h-[20rem]">
               <ul className='p-5'>
@@ -230,7 +230,7 @@ const Home = () => {
                   
                   </select>
                 </div>
-                {item.cardInventory
+                {item.skyventory
                   .slice() // Create a copy of the array to prevent mutating the original data
                   .sort((a: any, b: any) => {
                     if (sortType === 'title') {
